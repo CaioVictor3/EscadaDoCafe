@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Escala de Café</title>
+    <link rel="stylesheet" href="/style.css">
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js" 
+      integrity="sha512-GsLlZN/3F2ErC5ifS5QtgpiJtWd43JWSuIgh7mbzZ8zBps+dvLusV+eNQATqgA/HdeKFVgA5v3S/cIrLF7QnIg==" 
+      crossorigin="anonymous" 
+      referrerpolicy="no-referrer">
+    </script>
+
+</head>
+<body>
+    <h1>Escala de Café</h1>
+    <form id="personForm">
+        <input type="text" id="personName" placeholder="Nome da pessoa" required>
+        <button type="submit">Adicionar Pessoa</button>
+    </form>
+
+    <h2>Pessoas Adicionadas:</h2>
+    <ul id="personList">
+        <li>
+          <span class="person-name"></span> <button class="remove-button"></button> </li>
+      </ul>
+
+    <button onclick="generateSchedule()">Criar Escala</button>
+    <button onclick="exportToPDF()">Exportar para PDF</button>
+
+    <div id="calendar"></div> 
+
+    <script src="script.js"></script>
+</body>
+</html>
